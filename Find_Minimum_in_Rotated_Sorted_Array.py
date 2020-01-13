@@ -28,9 +28,10 @@ class Solution:
             
             mid  = (left + right) // 2
             
+            #if middle element is greater than the rightmost element, smallest element resides in the right
             if nums[mid] > nums[right]: 
                 left = mid + 1
-            else: 
+            else: #if middle element is smaller than rightmost element, we want to search in the left side of the middle element 
                 right = mid
         
         minimum = left
